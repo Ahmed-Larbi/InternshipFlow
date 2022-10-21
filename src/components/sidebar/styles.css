@@ -1,0 +1,105 @@
+*{
+    background: #F1F4F8;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px 20px;
+    gap: 35px;
+    list-style: none;
+
+    position: absolute;
+    width: 229px;
+    height: 950px;
+    left: 16px;
+    top: 16px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 12px 34px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+    
+}
+.selected {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+
+    width: 189px;
+    height: 48px;
+
+    background: rgba(102, 95, 239, 0.2);
+    /* Purple */
+
+    border: 1px solid #793EF5;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.elements {
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+    background-color: #FFFFFF;
+    margin-right: 25%;
+
+}
+.radical-Logo {
+    width: 160px;
+    height: 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background: #FFFFFF;
+    margin-bottom: 100px;
+    margin-left: 25%;
+}
+li {
+    margin-bottom: 10px;
+    background: #FFFFFF;
+    
+    
+}
+.item {
+    width: 86px;
+    height: 24px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+
+    /* Dark */
+
+    color: #1E1E1E;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+}
+span {
+    background: #FFFFFF
+}

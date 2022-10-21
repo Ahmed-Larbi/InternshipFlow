@@ -1,0 +1,23 @@
+.graphbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+
+    width: 1135px;
+    height: 270px;
+    margin-left: 20rem;
+
+    /* Snow */
+
+    background: #FFFFFF;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
