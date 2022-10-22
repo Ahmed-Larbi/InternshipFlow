@@ -11,7 +11,7 @@
 
     position: absolute;
     width: 229px;
-    height: 950px;
+    height: 800px;
     left: 16px;
     top: 16px;
 
@@ -73,8 +73,12 @@ li {
     
     
 }
+li:last-of-type {
+    position: absolute;
+    bottom: 0;
+}
 .item {
-    width: 86px;
+    width: 100px;
     height: 24px;
 
     font-family: 'Space Grotesk';
@@ -91,6 +95,7 @@ li {
     /* Dark */
 
     color: #1E1E1E;
+    white-space: nowrap;
 
 
     /* Inside auto layout */
@@ -102,4 +107,45 @@ li {
 }
 span {
     background: #FFFFFF
+}
+
+.profile {
+    width: 92px;
+    height: 24px;
+    
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    
+    color: #1E1E1E;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.profilePhoto {
+    width: 40px;
+    height: 40px;
+
+    /* Gray 50 */
+
+    background: #E2E6EB;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
