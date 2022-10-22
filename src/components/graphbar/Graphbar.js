@@ -1,6 +1,7 @@
 import React from 'react';
 import "./styles.css"
 import calendar from "../../assets/images/calendar-2.png"
+import funnelBar from "../../assets/images/Funnel.png"
 
 export default function GraphBar () {
     return (
@@ -17,6 +18,9 @@ export default function GraphBar () {
                     <button className='monthButton'>This Month</button>
                     <button className='datesButton'><img src={calendar} alt=""/>Select Dates</button>
                 </div>
+            </div>
+            <div className='funnel-bar'>
+                <img src={funnelBar} alt=""/>
             </div>
         </div>
     )

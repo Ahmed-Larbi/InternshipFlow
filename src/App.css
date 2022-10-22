@@ -28,4 +28,58 @@
 h1 {
   margin-top: 60px;
 }
+.title-div {
+  display: flex;
+  align-items: center;
+}
+
+.create-button {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-left: 47%;
+  margin-top: 35px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+  letter-spacing: 0.4px;
+  font-feature-settings: 'liga' off;
+
+  color: #FFFFFF;
+
+  width: 217px;
+  height: 44px;
+  border-color: transparent;
+
+  /* Purple */
+
+  background: #793EF5;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.add-icon {
+  height: 20px;
+  background: transparent;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
 
