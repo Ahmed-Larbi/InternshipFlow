@@ -23,7 +23,7 @@
 }
 h2 {
     width: 248px;
-    height: 24px;
+    height: 10px;
 
     /* Desktop/H5 */
 
@@ -52,7 +52,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
-    gap: 10px;
+    gap: 0px;
 
     width: 280px;
     height: 238px;
@@ -71,26 +71,154 @@ h2 {
 }
 p {
     width: 229px;
-height: 120px;
+    height: 120px;
 
-font-family: 'Space Grotesk';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-/* or 143% */
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    /* or 143% */
 
-letter-spacing: 0.3px;
-font-feature-settings: 'liga' off;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
 
-/* Dark */
+    /* Dark */
 
-color: #1E1E1E;
+    color: #1E1E1E;
 
 
-/* Inside auto layout */
+    /* Inside auto layout */
 
-flex: none;
-order: 1;
-flex-grow: 0;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.Filterbar {
+    /* Filter bar */
+
+
+/* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 10px;
+
+    width: 800px;
+    height: 35px;
+
+    /* Gray 6 */
+
+
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.weekButton {
+    margin-right: 20px;
+    padding: 6px 12px;
+    gap: 8px;
+
+    width: 100px;
+    height: 32px;
+
+    /* Purple */
+
+    background: #793EF5;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    border-color: transparent;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+    font-feature-settings: 'liga' off;
+
+    /* Snow */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    
+}
+.monthButton {
+    /* Filter not selected */
+
+
+/* Auto layout */
+
+    padding: 6px 12px;
+    gap: 8px;
+
+    width: 103px;
+    height: 34px;
+
+    /* Snow */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+    border-color: transparent;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 22px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+    font-feature-settings: 'liga' off;
+
+    /* Dark */
+
+    color: #1E1E1E;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.datesButton {
+    padding: 6px 12px;
+    gap: 8px;
+
+    width: 138px;
+    align-items: center;
+    flex-direction: row;
+    display: inline-flex;
+    height: 32px;
+    font-family: 'Space Grotesk';
+
+    /* Snow */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-left: 53%;
+    border-color: transparent;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+img {
+    background: #FFFFFF;
 }
