@@ -32,7 +32,7 @@ h4, h5 {
 tr {
     background: #FFFFFF;
 }
-p {
+.paragraph {
     height: 10px;
     background-color: #FFFFFF;
 }

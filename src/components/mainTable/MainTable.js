@@ -16,12 +16,12 @@ export default function MainTable() {
                     <th className='header'>Complete Period<img src={dropDown} alt="" className='dropIcon'/></th>
                     <th className='header'>Total Enrolled<img src={dropDown} alt="" className='dropIcon'/></th>
                     <th className='header'> Qualified Candidates<img src={dropDown} alt="" className='dropIcon'/></th>
-                    <th className='header'>..........</th>
+                    <th className='header'>         </th>
                 </tr>
                 <tr>
                     <td>
                         <h4>Product Design GVI</h4>
-                        <p>
+                        <p className="paragraph">
                             Amet minim moliit non deserunt
                         </p>
                     </td>
@@ -29,7 +29,7 @@ export default function MainTable() {
                         <h5 className='period'>
                             120 days
                         </h5>
-                        <p>
+                        <p className="paragraph">
                             (created on 10/12/2021)
                         </p>
                     </td>
@@ -48,7 +48,7 @@ export default function MainTable() {
                 <tr>
                 <td>
                         <h4>Product Design GVI</h4>
-                        <p>
+                        <p className="paragraph">
                             Amet minim moliit non deserunt
                         </p>
                     </td>
@@ -56,7 +56,7 @@ export default function MainTable() {
                         <h5 className='period'>
                             120 days
                         </h5>
-                        <p>
+                        <p className="paragraph">
                             (created on 10/12/2021)
                         </p>
                     </td>
@@ -77,7 +77,7 @@ export default function MainTable() {
                 <tr>
                     <td>
                         <h4>Product Design GVI</h4>
-                        <p>
+                        <p className="paragraph">
                             Amet minim moliit non deserunt
                         </p>
                     </td>
@@ -85,7 +85,7 @@ export default function MainTable() {
                         <h5 className='period'>
                             120 days
                         </h5>
-                        <p>
+                        <p className="paragraph">
                             (created on 10/12/2021)
                         </p>
                     </td>
@@ -106,7 +106,7 @@ export default function MainTable() {
                 <tr>
                     <td>
                         <h4>Product Design GVI</h4>
-                        <p>
+                        <p className="paragraph">
                             Amet minim moliit non deserunt
                         </p>
                     </td>
@@ -114,7 +114,7 @@ export default function MainTable() {
                         <h5 className='period'>
                             120 days
                         </h5>
-                        <p>
+                        <p className="paragraph">
                             (created on 10/12/2021)
                         </p>
                     </td>
