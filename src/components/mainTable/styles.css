@@ -1,29 +1,38 @@
+
 .table {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
     margin-left: 20rem;
     background: #FFFFFF;
     white-space: nowrap;
 
     width: 1165px;
-    height: 490px;
 
 
     /* Inside auto layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+}
+th {
+    line-height: 20px;
+}
+td {
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+}
+h4, h5 {
+    background-color: #FFFFFF;
 }
 tr {
-    line-height: 1px;
     background: #FFFFFF;
 }
-table {
-    width: 100%;
-    height: 100%;
+p {
+    height: 10px;
+    background-color: #FFFFFF;
 }
 th:nth-child(1) {
     padding: 16px 12px;
@@ -31,10 +40,9 @@ th:nth-child(1) {
     gap: 56px;
 
     width: 385px;
-    height: 20px;
+
 
     background: #F6F5F9;
-    border-radius: 20px 0px 0px 0px;
 
     /* Inside auto layout */
 
@@ -52,7 +60,7 @@ th:nth-child(2) {
     gap: 56px;
 
     width: 200px;
-    height: 20px;
+
 
     background: #F6F5F9;
 
@@ -70,10 +78,9 @@ th:nth-child(3) {
 /* Auto layout */
 
     padding: 16px 12px;
-    gap: 56px;
 
-    width: 160px;
-    height: 20px;
+    width: 200px;
+
 
     background: #F6F5F9;
 
@@ -85,11 +92,11 @@ th:nth-child(3) {
     flex-grow: 0;
 }
 th:nth-child(4) {
-    padding: 16px 12px;
+    padding: 10px 12px;
     gap: 56px;
 
     width: 250px;
-    height: 20px;
+
 
     background: #F6F5F9;
 
@@ -105,10 +112,9 @@ th:nth-child(5) {
     gap: 56px;
 
     width: 140px;
-    height: 20px;
+
 
     background: #F6F5F9;
-    border-radius: 0px 20px 0px 0px;
 
     /* Inside auto layout */
 
@@ -122,28 +128,61 @@ th:nth-child(5) {
     background: transparent;
 }
 .header {
-    white-space: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
 
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1px;
-    /* identical to box height, or 171% */
 
+}
+table{
+
+    border-spacing: 0;
+    background: #FFFFFF;
+    
+    
+}
+.totalEnrolled {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+    text-transform: uppercase;
     font-feature-settings: 'liga' off;
 
-    /* Text/Text - 01 */
+    /* Purple */
 
-    color: #2F3031;
-    background-color: transparent;
+    color: #793EF5;
 
 
-    /* Inside auto layout */
+}
+.period {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 0px;
+    /* identical to box height, or 125% */
+    
+    font-feature-settings: 'liga' off;
+    
+    /* Gray 1 */
+    
+    color: #333333;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+}
+.hollow {
+    
+    padding: 8px 16px;
+    gap: 8px;
+
+    width: 94px;
+    height: 40px;
+
+    background: #F0EFFD;
+    border-radius: 8px;
 }

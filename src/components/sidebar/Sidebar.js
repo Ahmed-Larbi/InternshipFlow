@@ -17,20 +17,20 @@ export default function Sidebar() {
                 </li>    
                 <li>
                     
-                        <span className="item"><img src={element4} alt="" className="elements"/>Dashboard</span>
+                <div className='selected'><span className="item"><img src={element4} alt="" className="elements"/>Dashboard</span></div>
                 </li>
                 <li>
-                        <span className="item"><img src={element3} alt="" className="elements"/>Apprenticeships</span>
+                <div className='selected'><span className="item"><img src={element3} alt="" className="elements"/>Apprenticeships</span></div>
                 </li>
                 <li>
-                        <span className="item"><img src={element2} alt="" className="elements"/>Internships</span>
+                <div className='selected'><span className="item"><img src={element2} alt="" className="elements"/>Internships</span></div>
                 </li>
                 <li>
 
-                        <span className="item"><img src={element1} alt="" className="elements"/>Jobs</span>
+                <div className='selected'> <span className="item"><img src={element1} alt="" className="elements"/>Jobs</span> </div>
                 </li>
                 <li>
-                        <span className="item"><img src={element0} alt="" className="elements"/>Settings</span>
+                <div className='selected'> <span className="item"><img src={element0} alt="" className="elements"/>Settings</span> </div>
                 </li>
                 <li>
                         <span className="item profile "><img src={hugPhoto} alt="" className="elements profilePhoto"/>Adam Scott</span>
