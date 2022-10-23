@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 import "./styles.css";
 import dropDown from "../../assets/images/arrow-square-down.png";
-import poll from "../../assets/images/Row.png"
+import poll from "../../assets/images/Row.png";
+import chart from "../../assets/buttons/chart.png";
+import moreInfo from "../../assets/buttons/more-2.png";
+import profileUser from "../../assets/buttons/profile-2user.png";
 
 export default function MainTable() {
 
@@ -36,6 +39,11 @@ export default function MainTable() {
                         </div> 
                     </td>
                     <td> <img src={poll} alt=""/></td>
+                    <td className='lastRow'>
+                        <img src={chart} alt=""/>
+                        <img src={profileUser} alt=""/>
+                        <img src={moreInfo} alt=""/>
+                    </td>
                 </tr>
                 <tr>
                 <td>
@@ -57,7 +65,14 @@ export default function MainTable() {
                         20,000
                         </div> 
                     </td>
-                    <td> <img src={poll} alt=""/></td>
+                    <td> 
+                        <img src={poll} alt=""/>
+                    </td>
+                    <td className='lastRow'>
+                        <img src={chart} alt=""/>
+                        <img src={profileUser} alt=""/>
+                        <img src={moreInfo} alt=""/>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -79,7 +94,14 @@ export default function MainTable() {
                         20,000
                         </div> 
                     </td>
-                    <td> <img src={poll} alt=""/></td>
+                    <td> 
+                        <img src={poll} alt=""/>
+                    </td>
+                    <td className='lastRow'>
+                        <img src={chart} alt=""/>
+                        <img src={profileUser} alt=""/>
+                        <img src={moreInfo} alt=""/>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -101,7 +123,14 @@ export default function MainTable() {
                         20,000
                         </div> 
                     </td>
-                    <td> <img src={poll} alt=""/></td>
+                    <td> 
+                        <img src={poll} alt=""/>
+                    </td>
+                    <td className='lastRow'>
+                        <img src={chart} alt=""/>
+                        <img src={profileUser} alt=""/>
+                        <img src={moreInfo} alt=""/>
+                    </td>
                 </tr>
             </table>
         </div>
