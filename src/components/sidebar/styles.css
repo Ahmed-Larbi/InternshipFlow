@@ -136,3 +136,9 @@ li .selected:hover {
 
     flex: none;
 }
+
+@media (max-width: 720px) {
+    .sidebar {
+      display: none;
+    }
+  }

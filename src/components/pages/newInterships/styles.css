@@ -1,0 +1,260 @@
+
+.header2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;  
+    margin-left: 2%;
+    position: absolute;
+    width: 95vw;
+    height: 10vh;
+    top: 20px;
+    border-radius: 16px;
+    background: #FFFFFF;
+
+filter: drop-shadow(0px 12px 34px rgba(0, 0, 0, 0.04));
+}
+button {
+    border-color: transparent;
+}
+.headertitle {
+    width: 268px;
+    height: 24px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 24px;
+    /* identical to box height, or 86% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+
+    color: #1E1E1E;
+    background: transparent;
+    white-space: nowrap;
+    margin-left: 25%;
+    margin-right: 25%;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.backButton {
+    width: 44px;
+    height: 24px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    background: transparent;
+
+    color: #1E1E1E;
+
+}
+.border {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: 219px;
+    height: 44px;
+    line-height: 20px;
+
+    /* Gray 50 */
+
+    background: #E2E6EB;
+    border-radius: 12px;
+
+}
+.border2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 12px;
+    background: transparent;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+#contbutton {
+    width: 159px;
+    height: 20px;
+    margin-right: 5px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+/* identical to box height, or 143% */
+
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-feature-settings: 'liga' off;
+    white-space: nowrap;
+    background: transparent;
+    
+
+    /* Gray 3 */
+
+    color: #828282;
+
+}
+.intershipsSteps {
+    box-sizing: border-box;
+
+/* Auto layout */
+
+    display: flex;
+    margin-left: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    gap: 20px;
+
+    position: absolute;
+    width: 95vw;
+    height: 5vh;
+    top: 118px;
+
+    border: 1px solid #D0D4DA;
+    border-radius: 20px;
+}
+h4 { 
+    width: 178px;
+    height: 24px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    white-space: nowrap;
+    background: transparent;
+
+    color: #1E1E1E;
+}
+.tick, span {
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    left: 0px;
+    top: 0px;
+}
+.table2 > ul {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 12px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 654px;
+    height: 696px;
+    top: 180px;
+
+}
+.menu {
+    margin-right: 10px;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    margin-top: 15px;
+}
+.table2 > ul > li {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+.insideElements {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+
+    width: 606px;
+    height: 55px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Gray 5 */
+
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+}
+.insideElements > img {
+    margin-left: auto;
+}
+.addMore {
+    padding: 16px 24px;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+
+    width: 606px;
+    height: 56px;
+
+    /* Purple */
+
+    border: 1px dashed #793EF5;
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 8;
+    flex-grow: 0;
+    z-index: 0;
+
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+    font-feature-settings: 'liga' off;
+
+    /* Purple */
+
+    color: #793EF5;
+}

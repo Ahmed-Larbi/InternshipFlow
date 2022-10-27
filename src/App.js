@@ -1,21 +1,20 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import MainPage from './components/pages/mainpage/mainPage';
+import NewInternships from './components/pages/newInterships/NewInternship';
 import './App.css';
-import Sidebar from './components/sidebar/Sidebar';
-import GraphBar from './components/graphbar/Graphbar';
-import AdditionIcon from "./assets/images/add-square.png"
-import MainTable from './components/mainTable/MainTable';
-
-function App() {
-  return (
-    <div className="App">
-    <div className='title-div'>
-      <button className='create-button'> <img className="add-icon" src={AdditionIcon} alt=""/>Create New Internship</button>
-      <h1 className='title'> Internships </h1>
-    </div>
-      <Sidebar/>
-      <GraphBar/>
-      <MainTable/>
-    </div>
-  );
+  
+export default class App extends Component {
+  render() {
+    return (
+       <Router>
+           <div className="App">
+           <Routes>
+                 <Route exact path='/' element={< MainPage />}></Route>
+                 <Route exact path='/add-new' element={< NewInternships />}></Route>
+          </Routes>
+          </div>
+       </Router>
+   );
+  }
 }
-
-export default App;
