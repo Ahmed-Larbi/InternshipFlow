@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles.css';
+import './newIntern.css';
 import contImage from "../../../assets/buttons/arrow-right.png"
 import {useNavigate } from 'react-router-dom';
 import backIcon from "../../../assets/buttons/arrow-left.png"
@@ -103,6 +103,7 @@ export default function NewInternships () {
 
                             <button className='addMore'> <img src={addButton} alt='' style={{'margin-right': '12px'}}/>Add More </button>
                         </li>
+                        
                     </ul>
                 </div>
                 

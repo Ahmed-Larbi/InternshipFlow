@@ -1,5 +1,5 @@
 import React from 'react';
-import "./styles.css";
+import "./MainTable.css";
 import dropDown from "../../assets/images/arrow-square-down.png";
 import poll from "../../assets/images/Row.png";
 import chart from "../../assets/buttons/chart.png";

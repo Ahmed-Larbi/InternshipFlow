@@ -1,4 +1,4 @@
-import './styles.css';
+import './mainPage.css';
 import Sidebar from '../../sidebar/Sidebar';
 import GraphBar from '../../graphbar/Graphbar';
 import AdditionIcon from "../../../assets/images/add-square.png"

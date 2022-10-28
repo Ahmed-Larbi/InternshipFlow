@@ -1,5 +1,5 @@
 import React from 'react';
-import "./styles.css"
+import "./Graphbar.css"
 import calendar from "../../assets/images/calendar-2.png"
 import funnelBar from "../../assets/images/Funnel.png"
 

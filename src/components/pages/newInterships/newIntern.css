@@ -222,6 +222,11 @@ h4 {
 .insideElements > img {
     margin-left: auto;
 }
+
+.tick {
+    background: transparent;
+}
+
 .addMore {
     padding: 16px 24px;
     gap: 4px;

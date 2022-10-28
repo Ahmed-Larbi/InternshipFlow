@@ -1,5 +1,5 @@
 import React from 'react';
-import "./styles.css";
+import "./Sidebar.css";
 import Image from "../../assets/images/RadicallX-Black-Logo1.png"
 import element4 from '../../assets/images/element-4.png';
 import element3 from '../../assets/images/medal-star.png';
@@ -17,7 +17,7 @@ export default function Sidebar() {
                 </li>    
                 <li>
                     
-                <div className='selected'><span className="item"><img src={element4} alt="" className="elements"/>Dashboard</span></div>
+                <div className='selected'><span className="item" id="span"><img src={element4} alt="" className="elements"/>Dashboard</span></div>
                 </li>
                 <li>
                 <div className='selected'><span className="item"><img src={element3} alt="" className="elements"/>Apprenticeships</span></div>
