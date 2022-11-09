@@ -219,8 +219,14 @@ h4 {
 
     /* Inside auto layout */
 }
-.insideElements > img {
+.insideElements > .cursorImg {
     margin-left: auto;
+}
+.insideElements > .done__logo {
+    margin-left: 10px;
+}
+.done__logo {
+    display: none;
 }
 
 .tick {
@@ -262,4 +268,24 @@ h4 {
     /* Purple */
 
     color: #793EF5;
+}
+
+.right__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 10px;
+
+    position: absolute;
+    width: 1000px;
+    height: 645px;
+    left: 750px;
+    top: 195px;
+
+    /* Base/White */
+
+    opacity: 10;
+    border-radius: 20px;
 }
