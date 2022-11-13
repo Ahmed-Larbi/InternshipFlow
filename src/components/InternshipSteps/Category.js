@@ -40,7 +40,6 @@ export default function Category(props) {
         event.preventDefault();
     
     }
-    console.log(props.searchResults && props.searchResults)
 
     return (
         <div className='category__choice'>

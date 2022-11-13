@@ -11,39 +11,39 @@ import selectedArrow from "../../../assets/buttons/selected-arrow.png"
 import Category from '../../InternshipSteps/Category';
 import Description from '../../InternshipSteps/Decs';
 import done from "../../../assets/buttons/done-circle.png"
+import Location from '../../InternshipSteps/Location';
 
 export default function NewInternships () {
+    var insideElements = "insideElements"
+    var insideElementsSelected = "insideElementsSelected"
     const [catogoryDetails, setCategoyDetails] = React.useState([])
-    const [description, setDescription] = React.useState('')
+    const [description, setDescription] = React.useState()
     const [pageType, setPageType] = React.useState("");
+    const [buttons, setButtons] = React.useState( [
+        {title: 'Category', isActive: false, isDone: false},
+        {title: 'Description', isActive: false, isDone: false},
+        {title: 'Location', isActive: false, isDone: false},
+        {title: 'Benefits', isActive: false, isDone: false},
+        {title: 'Intro Video', isActive: false, isDone: false},
+        {title: 'Mentor Details', isActive: false, isDone: false},
+        {title: 'Recommended Roles', isActive: false, isDone: false},
+        {title: 'Web Links & Resources', isActive: false, isDone: false},
+    ])
     const navigate = useNavigate();
     const goBack = ()=> {
         navigate('/')
     }
 
-    function handleClick(event, param) {
-
-        const buttonsGroup = document.getElementsByClassName("insideElements")
-        const img = document.getElementsByClassName('cursorImg')
-
-            for(let x=0; x<buttonsGroup.length; x++)
-            {
-                if(x === event.target.id-1)
-                {
-                    buttonsGroup[x].style.cssText = `
-                    border: 1px solid #793EF5;
-                    border-radius: 12px;
-                    filter: drop-shadow(1px 12px 34px rgba(0, 0, 0, 0.08));
-                    `;
-                    img[x].src = selectedArrow;
-                }
-                else {
-                    buttonsGroup[x].style = "overflow: revert";
-                    img[x].src = open;
-                }
-            }
-            setPageType(param);
-    }
+    const handleClick = (title) => {
+        setPageType(title)
+        setButtons(
+          buttons.map((el) =>
+            el.title === title
+              ? { ...el, isActive: true }
+              : { ...el, isActive: false }
+          )
+        );
+      };
         return(
     
             <div>
@@ -80,59 +80,23 @@ export default function NewInternships () {
                     
                 </div>
                 <div className='table2'>
+                
                     <ul>
+                    {buttons.map((el) => (
                         <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={ (event) => handleClick(event,'Category')} id="1">
-                                Category <img src={done} alt="" className='done__logo'/> <img src={open} alt="" className='cursorImg'/>
-                            </div>
+                        <img src={menu} alt="" className='menu'/>
+                        <div className={el.isActive ? insideElementsSelected : insideElements} onClick={ ()=> handleClick(el.title)}> 
+                        {el.title} 
+                        {el.done && 
+                        <img src={done} alt="" className='done__logo'/>}
+                        {el.isActive ? <img src={selectedArrow} alt="" className='cursorImg'/> : <img src={open} alt="" className='cursorImg'/>}
+                        </div>
                         </li>
-                        <li>
-                            <img src={menu}  alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'Description')} id="2">
-                                Description <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'Location')} id="3">
-                                Location <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'Benefits')} id="4">
-                                Benefits <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'Intro')} id="5">
-                                Intro Video <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'Mentor')} id="6">
-                                Mentor Details <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'Roles')} id="7">
-                                Recommended Roles <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
-                            <img src={menu} alt="" className="menu"/>
-                            <div className='insideElements' onClick={(event) => handleClick(event,'W-links')} id="8">
-                                Web Links & Resources <img src={open} alt="" className='cursorImg'/>
-                            </div>
-                        </li>
-                        <li>
+                    ))}
+                    <li>
+                        <button className='addMore'> <img src={addButton} alt='' style={{'marginRight': '12px' , background: 'transparent'}}/>Add More </button>
+                    </li>
 
-                            <button className='addMore'> <img src={addButton} alt='' style={{'marginRight': '12px' , background: 'transparent'}}/>Add More </button>
-                        </li>
                         
                     </ul>
                 </div>
@@ -141,7 +105,7 @@ export default function NewInternships () {
                         switch (pageType) {
                         case "Category":   return <Category setCategoyDetails={setCategoyDetails} searchResults = {catogoryDetails}/>;
                         case "Description": return <Description setDescription={setDescription} description={description}/>;
-                        case "Location":  return "Location";
+                        case "Location":  return <Location/>;
                         case "Benefits": return "Benefits"
                         default:      return <Category/>;
                         }
