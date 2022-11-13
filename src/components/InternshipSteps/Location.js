@@ -2,18 +2,23 @@ import React from 'react';
 import "./Location.css"
 import Select from "react-select"
 
-export default function Location() {
+export default function Location(props) {
 
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
+    const opts = [
+        { value: 'Uae', label: 'United Arab Emirates' },
+        { value: 'KSA', label: 'Kingdom of Saudi Arabia' },
+        { value: 'QTR', label: 'Qatar' }
       ]
-
+    
+    const handleChange = (event) => {
+        props.setLocation(event.value)
+    }
     return (
         <div className='location__choice'>
         <h1 className='title__location'> Location </h1>
-            <Select placeholder="Select Location"/>
+            <Select placeholder="Enter Location" value={opts.filter(function(option) {
+          return option.value === props.Location;
+        })} options={opts} onChange={handleChange}/>
         </div> 
     )
 }

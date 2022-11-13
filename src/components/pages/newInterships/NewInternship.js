@@ -17,7 +17,8 @@ export default function NewInternships () {
     var insideElements = "insideElements"
     var insideElementsSelected = "insideElementsSelected"
     const [catogoryDetails, setCategoyDetails] = React.useState([])
-    const [description, setDescription] = React.useState()
+    const [location, setLocation] = React.useState('');
+    const [description, setDescription] = React.useState("")
     const [pageType, setPageType] = React.useState("");
     const [buttons, setButtons] = React.useState( [
         {title: 'Category', isActive: false, isDone: false},
@@ -44,6 +45,89 @@ export default function NewInternships () {
           )
         );
       };
+      const checkCategoryDetails = () => {
+        if(catogoryDetails.length > 0)
+        {
+            setButtons(current =>
+                current.map(obj => {
+                  if (obj.title === 'Category') {
+                    return {...obj, isDone: true,};
+                  }
+          
+                  return obj;
+                }),
+              );
+        }
+        else {
+            setButtons(current =>
+                current.map(obj => {
+                  if (obj.title === 'Category') {
+                    return {...obj, isDone: false,};
+                  }
+          
+                  return obj;
+                }),
+              );
+        }
+      }
+      const checkdescriptionChanges = () => {
+        if(description.length > 10)
+        {
+            setButtons(current =>
+                current.map(obj => {
+                  if (obj.title === 'Description') {
+                    return {...obj, isDone: true,};
+                  }
+          
+                  return obj;
+                }),
+              );
+        }
+        else {
+            setButtons(current =>
+                current.map(obj => {
+                  if (obj.title === 'Description') {
+                    return {...obj, isDone: false,};
+                  }
+          
+                  return obj;
+                }),
+              );
+        }
+      }
+
+      const checkLocationChanges = () => {
+        if(location !== '')
+        {
+            setButtons(current =>
+                current.map(obj => {
+                  if (obj.title === 'Location') {
+                    return {...obj, isDone: true,};
+                  }
+          
+                  return obj;
+                }),
+              );
+        }
+        else {
+            setButtons(current =>
+                current.map(obj => {
+                  if (obj.title === 'Location') {
+                    return {...obj, isDone: false,};
+                  }
+          
+                  return obj;
+                }),
+              );
+        }
+      }
+
+      React.useEffect( ()=> {
+        checkCategoryDetails()
+        checkdescriptionChanges()
+        checkLocationChanges()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      },[catogoryDetails, description, location])
         return(
     
             <div>
@@ -87,8 +171,7 @@ export default function NewInternships () {
                         <img src={menu} alt="" className='menu'/>
                         <div className={el.isActive ? insideElementsSelected : insideElements} onClick={ ()=> handleClick(el.title)}> 
                         {el.title} 
-                        {el.done && 
-                        <img src={done} alt="" className='done__logo'/>}
+                        {el.isDone ? <img src={done} alt="" className='done__logo'></img> : ""}
                         {el.isActive ? <img src={selectedArrow} alt="" className='cursorImg'/> : <img src={open} alt="" className='cursorImg'/>}
                         </div>
                         </li>
@@ -105,7 +188,7 @@ export default function NewInternships () {
                         switch (pageType) {
                         case "Category":   return <Category setCategoyDetails={setCategoyDetails} searchResults = {catogoryDetails}/>;
                         case "Description": return <Description setDescription={setDescription} description={description}/>;
-                        case "Location":  return <Location/>;
+                        case "Location":  return <Location setLocation= {setLocation} location = {location}/>;
                         case "Benefits": return "Benefits"
                         default:      return <Category/>;
                         }

@@ -13,7 +13,7 @@ export default function Description(props) {
         <div className='description'>
             <h1 className='desc__title'> Description </h1>
             <form onChange={preventDefault}>
-            <textarea className='text-area' value={text} placeholder='Description' onChange={ (event)=> props.setDescription(event.target.value)}>
+            <textarea className='text-area' value={text} placeholder='Description' onChange={(event)=> props.setDescription(event.target.value)}>
             
             </textarea>
                 
