@@ -1,0 +1,148 @@
+.mentor__side {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 789px;
+    height: 314px;
+    left: 210px;
+    top: 2px;
+
+    background: #FFFFFF;
+    border-radius: 20px; 
+}
+.mentor__side h1 {
+    background-color: transparent;
+    margin-top: 0;
+}
+.input__class {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 20px 0px;
+    gap: 20px;
+    position: relative;
+}
+.input__class img {
+    position: absolute;
+    background-color: transparent;
+    top: 30px;
+    padding-left: 10px;
+}
+::placeholder {
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+
+    color: #1E1E1E;
+
+    opacity: 0.5;
+    padding-left: 20px;
+}
+.email__image {
+    left: 380px;
+}
+.field {
+    /* Frame 1321314704 */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 12px 12px 16px;
+    gap: 10px;
+
+    width: 358.5px;
+    height: 48px;
+
+    /* Snow */
+
+    background: #FFFFFF;
+    /* Field Stroke */
+
+    border: 1px solid #CECECE;
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.first__image {
+    width: 80px;
+    height: 80px;
+
+    background: #E2E6EB;
+    border-radius: 20px;
+    position: relative;
+
+}
+.second__image {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 10%;
+    right: 0%;
+    top: 45%;
+    bottom: 0%;
+
+    opacity: 1;
+    background-color: transparent;
+    /* Snow */
+}
+#linkedin {
+    box-sizing: border-box;
+
+/* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 12px 12px 16px;
+    gap: 10px;
+
+    width: 741px;
+    height: 48px;
+
+    /* Snow */
+
+    background: #FFFFFF;
+    /* Field Stroke */
+
+    border: 1px solid #CECECE;
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 3;
+}
+#linkedin__image {
+    position: absolute;
+    background-color: transparent;
+    padding: 10px;
+}
+label {
+    background-color: transparent;
+}

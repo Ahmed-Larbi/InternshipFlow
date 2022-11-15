@@ -14,6 +14,7 @@ import done from "../../../assets/buttons/done-circle.png"
 import Location from '../../InternshipSteps/Location/Location';
 import Benefits from '../../InternshipSteps/Benefits/Benefits';
 import Intro from '../../InternshipSteps/Intro/Intro';
+import MentorDetails from '../../InternshipSteps/MentorDetails/MentorDetails';
 
 export default function NewInternships () {
     var insideElements = "insideElements"
@@ -249,6 +250,7 @@ export default function NewInternships () {
                         case "Location":  return <Location setLocation= {setLocation} location = {location}/>;
                         case "Benefits": return <Benefits setBenefits={setBenefits} benefits={benefits}/>
                         case "Intro Video": return <Intro setIntroFiles = {setIntroFiles} introFiles = {introFiles}/>
+                        case "Mentor Details": return <MentorDetails/>
                         default:      return <Category/>;
                         }
                     })()}

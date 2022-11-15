@@ -23,6 +23,8 @@ export default function Intro(props) {
         <div className='intro__side'>
         <h1 className='intro__header'> Intro Video </h1>
         <form>
+        {/* Todo: 
+        Fix the delete button */}
             <label htmlFor='files' className="input__area">Drag n drop to upload your video <img src={documentupload} alt=""/></label>
 			<input id="files" type="file" multiple onChange={changeHandler} style={{visibility: "hidden"}}/>
         </form>
