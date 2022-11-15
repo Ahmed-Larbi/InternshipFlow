@@ -12,14 +12,18 @@ import Category from '../../InternshipSteps/Category';
 import Description from '../../InternshipSteps/Decs';
 import done from "../../../assets/buttons/done-circle.png"
 import Location from '../../InternshipSteps/Location';
+import Benefits from '../../InternshipSteps/Benefits';
+import Intro from '../../InternshipSteps/Intro';
 
 export default function NewInternships () {
     var insideElements = "insideElements"
     var insideElementsSelected = "insideElementsSelected"
     const [catogoryDetails, setCategoyDetails] = React.useState([])
     const [location, setLocation] = React.useState('');
+    const [benefits, setBenefits] = React.useState('');
     const [description, setDescription] = React.useState("")
-    const [pageType, setPageType] = React.useState("");
+    const [introFiles, setIntroFiles] = React.useState([]);
+    const [pageType, setPageType] = React.useState("Category");
     const [buttons, setButtons] = React.useState( [
         {title: 'Category', isActive: false, isDone: false},
         {title: 'Description', isActive: false, isDone: false},
@@ -36,98 +40,151 @@ export default function NewInternships () {
     }
 
     const handleClick = (title) => {
-        setPageType(title)
-        setButtons(
-          buttons.map((el) =>
-            el.title === title
-              ? { ...el, isActive: true }
-              : { ...el, isActive: false }
-          )
-        );
-      };
-      const checkCategoryDetails = () => {
-        if(catogoryDetails.length > 0)
-        {
-            setButtons(current =>
-                current.map(obj => {
-                  if (obj.title === 'Category') {
-                    return {...obj, isDone: true,};
-                  }
-          
-                  return obj;
-                }),
-              );
-        }
-        else {
-            setButtons(current =>
-                current.map(obj => {
-                  if (obj.title === 'Category') {
-                    return {...obj, isDone: false,};
-                  }
-          
-                  return obj;
-                }),
-              );
-        }
+      setPageType(title)
+      setButtons(
+        buttons.map((el) =>
+          el.title === title
+            ? { ...el, isActive: true }
+            : { ...el, isActive: false }
+        )
+      );
+    };
+    const checkCategoryDetails = () => {
+      if(catogoryDetails.length > 0)
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Category') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
       }
-      const checkdescriptionChanges = () => {
-        if(description.length > 10)
-        {
-            setButtons(current =>
-                current.map(obj => {
-                  if (obj.title === 'Description') {
-                    return {...obj, isDone: true,};
-                  }
-          
-                  return obj;
-                }),
-              );
-        }
-        else {
-            setButtons(current =>
-                current.map(obj => {
-                  if (obj.title === 'Description') {
-                    return {...obj, isDone: false,};
-                  }
-          
-                  return obj;
-                }),
-              );
-        }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Category') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
       }
+    }
+    const checkdescriptionChanges = () => {
+      if(description.length > 10)
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Description') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Description') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+    }
 
-      const checkLocationChanges = () => {
-        if(location !== '')
-        {
-            setButtons(current =>
-                current.map(obj => {
-                  if (obj.title === 'Location') {
-                    return {...obj, isDone: true,};
-                  }
-          
-                  return obj;
-                }),
-              );
-        }
-        else {
-            setButtons(current =>
-                current.map(obj => {
-                  if (obj.title === 'Location') {
-                    return {...obj, isDone: false,};
-                  }
-          
-                  return obj;
-                }),
-              );
-        }
+    const checkLocationChanges = () => {
+      if(location !== '')
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Location') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
       }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Location') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+    }
+    const checkBenefits = () => {
+      if(benefits.length > 10)
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Benefits') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Benefits') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+    }
+    const checkIntroFiles = () => {
+      if(introFiles.length > 0)
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Intro Video') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Intro Video') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+    }
+    
 
       React.useEffect( ()=> {
         checkCategoryDetails()
         checkdescriptionChanges()
         checkLocationChanges()
+        checkBenefits()
+        checkIntroFiles()
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      },[catogoryDetails, description, location])
+      },[catogoryDetails, description, location , benefits, introFiles])
         return(
     
             <div>
@@ -189,7 +246,8 @@ export default function NewInternships () {
                         case "Category":   return <Category setCategoyDetails={setCategoyDetails} searchResults = {catogoryDetails}/>;
                         case "Description": return <Description setDescription={setDescription} description={description}/>;
                         case "Location":  return <Location setLocation= {setLocation} location = {location}/>;
-                        case "Benefits": return "Benefits"
+                        case "Benefits": return <Benefits setBenefits={setBenefits} benefits={benefits}/>
+                        case "Intro Video": return <Intro setIntroFiles = {setIntroFiles} introFiles = {introFiles}/>
                         default:      return <Category/>;
                         }
                     })()}
