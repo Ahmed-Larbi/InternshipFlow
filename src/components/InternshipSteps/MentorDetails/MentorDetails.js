@@ -8,6 +8,12 @@ import linkedin from "../../../assets/buttons/link.png"
 
 export default function MentorDetails(props) {
     const handleformChange = (event) => {
+        const newMentorDetails = {
+            'Name': '',
+            'emailAddress': '',
+            'Linkedin': '',
+            'Picture': ''
+        }
     }
 
     return (
@@ -18,17 +24,17 @@ export default function MentorDetails(props) {
             <img src={button} alt="" className='first__image'/>
             <img src={button2} alt="" className='second__image'/>
             </label>
-            <input type="file" style={{visibility: "hidden"}} id="picture"/>
+            <input type="file" value={props ? props.mentorDetails.Picture : ''} style={{visibility: "hidden"}} id="picture"/>
 
 
             <div className='input__class'>
 
                 <img src={user} alt=""/>
-                <input type="text" id='name' className='field' placeholder='Name'/>
+                <input type="text" id='name' className='field' placeholder='Name' value={props.mentorDetails.Name}/>
 
 
                 <img src={email} alt="" className='email__image'/>
-                <input type="text" id='email' className='field' placeholder='Email Address'/>
+                <input type="text" id='email' className='field' placeholder='Email Address' value={props.mentorDetails.emailAddress}/>
 
             </div>
 

@@ -25,6 +25,13 @@ export default function NewInternships () {
     const [description, setDescription] = React.useState("")
     const [introFiles, setIntroFiles] = React.useState([]);
     const [pageType, setPageType] = React.useState("Category");
+    const [mentorDetails, setMentorDetails] = React.useState({
+      'Name': '',
+      'emailAddress': '',
+      'Linkedin': '',
+      'Picture': ''
+
+    })
     const [buttons, setButtons] = React.useState( [
         {title: 'Category', isActive: false, isDone: false},
         {title: 'Description', isActive: false, isDone: false},
@@ -250,7 +257,7 @@ export default function NewInternships () {
                         case "Location":  return <Location setLocation= {setLocation} location = {location}/>;
                         case "Benefits": return <Benefits setBenefits={setBenefits} benefits={benefits}/>
                         case "Intro Video": return <Intro setIntroFiles = {setIntroFiles} introFiles = {introFiles}/>
-                        case "Mentor Details": return <MentorDetails/>
+                        case "Mentor Details": return <MentorDetails mentorDetails = {mentorDetails} setMentorDetails={setMentorDetails}/>
                         default:      return <Category/>;
                         }
                     })()}
