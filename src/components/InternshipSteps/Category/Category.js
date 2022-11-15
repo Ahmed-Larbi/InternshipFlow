@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Category.css"
-import cancel from "../../assets/buttons/cancel.png"
+import cancel from "../../../assets/buttons/cancel.png"
 
 export default function Category(props) {
 

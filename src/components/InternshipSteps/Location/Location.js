@@ -14,11 +14,15 @@ export default function Location(props) {
         props.setLocation(event.value)
     }
     return (
-        <div className='location__choice'>
-        <h1 className='title__location'> Location </h1>
-            <Select placeholder="Enter Location" value={opts.filter(function(option) {
-          return option.value === props.Location;
-        })} options={opts} onChange={handleChange}/>
+        <div 
+        className='location__choice'>
+        <h1 
+        className='title__location'> Location </h1>
+            <Select 
+            placeholder="Enter Location" 
+            value={props.location} 
+            options={opts} 
+            onChange={handleChange}/>
         </div> 
     )
 }

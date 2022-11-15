@@ -8,12 +8,12 @@ import menu from "../../../assets/buttons/menu.png"
 import open from "../../../assets/buttons/arrow-right2.png"
 import addButton from "../../../assets/buttons/add-square.png"
 import selectedArrow from "../../../assets/buttons/selected-arrow.png"
-import Category from '../../InternshipSteps/Category';
-import Description from '../../InternshipSteps/Decs';
+import Category from '../../InternshipSteps/Category/Category';
+import Description from '../../InternshipSteps/Decs/Decs';
 import done from "../../../assets/buttons/done-circle.png"
-import Location from '../../InternshipSteps/Location';
-import Benefits from '../../InternshipSteps/Benefits';
-import Intro from '../../InternshipSteps/Intro';
+import Location from '../../InternshipSteps/Location/Location';
+import Benefits from '../../InternshipSteps/Benefits/Benefits';
+import Intro from '../../InternshipSteps/Intro/Intro';
 
 export default function NewInternships () {
     var insideElements = "insideElements"
@@ -185,6 +185,7 @@ export default function NewInternships () {
         checkIntroFiles()
       // eslint-disable-next-line react-hooks/exhaustive-deps
       },[catogoryDetails, description, location , benefits, introFiles])
+
         return(
     
             <div>

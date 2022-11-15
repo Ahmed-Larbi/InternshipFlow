@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Intro.css"
-import cancel from "../../assets/buttons/cancel.png"
+import cancel from "../../../assets/buttons/cancel.png"
+import documentupload from "../../../assets/buttons/document-upload.png"
 
 export default function Intro(props) {
     const changeHandler = (event) => {
@@ -20,9 +21,10 @@ export default function Intro(props) {
 
     return (
         <div className='intro__side'>
+        <h1 className='intro__header'> Intro Video </h1>
         <form>
-
-			<input type="file" multiple onChange={changeHandler} className="input__area"/>
+            <label htmlFor='files' className="input__area">Drag n drop to upload your video <img src={documentupload} alt=""/></label>
+			<input id="files" type="file" multiple onChange={changeHandler} style={{visibility: "hidden"}}/>
         </form>
             {
                 <div className='container'>
