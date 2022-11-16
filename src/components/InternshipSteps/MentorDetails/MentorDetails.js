@@ -7,7 +7,8 @@ import email from "../../../assets/buttons/sms.png"
 import linkedin from "../../../assets/buttons/link.png"
 
 export default function MentorDetails(props) {
-    const handleformChange = (event) => {
+    function handleformChange (event){
+        event.preventDefault();
         const newMentorDetails = {
             'Name': '',
             'emailAddress': '',
@@ -19,22 +20,22 @@ export default function MentorDetails(props) {
     return (
     <div className="mentor__side">
     <h1> Mentor Details </h1>
-        <form onChange={handleformChange}>
+        <form onChange={(event) => handleformChange(event)}>
             <label htmlFor='picture'>
             <img src={button} alt="" className='first__image'/>
             <img src={button2} alt="" className='second__image'/>
             </label>
-            <input type="file" value={props ? props.mentorDetails.Picture : ''} style={{visibility: "hidden"}} id="picture"/>
+            <input type="file" style={{visibility: "hidden"}} id="picture"/>
 
 
             <div className='input__class'>
 
                 <img src={user} alt=""/>
-                <input type="text" id='name' className='field' placeholder='Name' value={props.mentorDetails.Name}/>
+                <input type="text" id='name' className='field' placeholder='Name' />
 
 
                 <img src={email} alt="" className='email__image'/>
-                <input type="text" id='email' className='field' placeholder='Email Address' value={props.mentorDetails.emailAddress}/>
+                <input type="email" id='email' className='field' placeholder='Email Address' />
 
             </div>
 

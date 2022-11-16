@@ -15,6 +15,8 @@ import Location from '../../InternshipSteps/Location/Location';
 import Benefits from '../../InternshipSteps/Benefits/Benefits';
 import Intro from '../../InternshipSteps/Intro/Intro';
 import MentorDetails from '../../InternshipSteps/MentorDetails/MentorDetails';
+import RecommendedRoles from '../../InternshipSteps/RecommendedRoles/Recommended';
+import WebLinks from '../../InternshipSteps/WebLinks/WebLinks';
 
 export default function NewInternships () {
     var insideElements = "insideElements"
@@ -25,6 +27,8 @@ export default function NewInternships () {
     const [description, setDescription] = React.useState("")
     const [introFiles, setIntroFiles] = React.useState([]);
     const [pageType, setPageType] = React.useState("Category");
+    const [recommendedDetails, setRecommendedDetails] = React.useState([])
+    const [webLinks, setWebLinks] = React.useState('');
     const [mentorDetails, setMentorDetails] = React.useState({
       'Name': '',
       'emailAddress': '',
@@ -183,6 +187,56 @@ export default function NewInternships () {
             );
       }
     }
+    const checkRecommendedRoles = () => {
+      if(recommendedDetails.length > 0)
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Recommended Roles') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Recommended Roles') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+    }
+    const checkWebLinks = () => {
+      if(webLinks !== '')
+      {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Web Links & Resources') {
+                  return {...obj, isDone: true,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+      else {
+          setButtons(current =>
+              current.map(obj => {
+                if (obj.title === 'Web Links & Resources') {
+                  return {...obj, isDone: false,};
+                }
+        
+                return obj;
+              }),
+            );
+      }
+    }
     
 
       React.useEffect( ()=> {
@@ -191,8 +245,10 @@ export default function NewInternships () {
         checkLocationChanges()
         checkBenefits()
         checkIntroFiles()
+        checkRecommendedRoles()
+        checkWebLinks()
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      },[catogoryDetails, description, location , benefits, introFiles])
+      },[catogoryDetails, description, location , benefits, introFiles, recommendedDetails, webLinks])
 
         return(
     
@@ -258,6 +314,8 @@ export default function NewInternships () {
                         case "Benefits": return <Benefits setBenefits={setBenefits} benefits={benefits}/>
                         case "Intro Video": return <Intro setIntroFiles = {setIntroFiles} introFiles = {introFiles}/>
                         case "Mentor Details": return <MentorDetails mentorDetails = {mentorDetails} setMentorDetails={setMentorDetails}/>
+                        case "Recommended Roles" : return <RecommendedRoles recommendedDetails = {recommendedDetails} setRecommendedDetails = {setRecommendedDetails}/>
+                        case "Web Links & Resources": return <WebLinks webLinks={webLinks} setWebLinks={setWebLinks}/>
                         default:      return <Category/>;
                         }
                     })()}
