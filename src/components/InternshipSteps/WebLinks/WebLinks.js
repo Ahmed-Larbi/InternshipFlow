@@ -16,7 +16,7 @@ export default function WebLinks(props) {
         <h1 className='weblinks__title'> Web-Links & Resources </h1>
         <form onSubmit={handleSubmit}>
             <input placeholder='Add URL' className="search__bar" onChange={(event) => props.setWebLinks(event.target.value)}/>
-            <button className='addurl__button'> <img src={addButton} alt=""/> Add URL</button>
+            <button className='addurl__button'> <img src={addButton} alt=""/> Add URL </button>
         </form>
         </div>
         
